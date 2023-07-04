@@ -31,11 +31,11 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  persistent_bottom_nav_bar: ^5.0.2
   font_awesome_flutter: ^10.5.0
   flutter_qiblah: ^2.2.0
   rxdart_ext: ^0.2.9
   flutter_compass: ^0.7.0
+  curved_navigation_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:
