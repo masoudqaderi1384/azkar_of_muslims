@@ -1,3 +1,4 @@
+import 'package:azkar_of_muslims/utilities/azkar.dart';
 import 'package:azkar_of_muslims/utilities/preyer_motion.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
                             "ضیاء الاذکار",
@@ -88,40 +90,59 @@ class _HomePageState extends State<HomePage> {
               height: 25,
             ),
             Expanded(
-                child: Container(
-                  padding: EdgeInsets.all(25.0),
-                  color: Colors.grey[200],
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Icon(Icons.more_horiz_rounded),
-                          Text("اذکار نبوی",style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'Afghan',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),),
-                        ],
-                      ),
-                      SizedBox(height: 20,),
-                      Container(
-                        padding: EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16.0),
+              child: Container(
+                padding: EdgeInsets.all(25.0),
+                color: Colors.grey[200],
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(),
+                      height: 5,
+                      width: 10,
+                      color: Colors.blue,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.more_horiz_rounded),
+                        Text(
+                          "اذکار نبوی",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Afghan',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-
-                          ],
-                        )
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Expanded(
+                        child: ListView(
+                      children: [
+                        Prayer(
+                            name_Azkar: "اذکار صبح",
+                            shar_Azkar: "احادیث صحیح و مستند",
+                            icon_Azkar: Icons.sunny),
+                        Prayer(
+                            name_Azkar: "اذکار شام",
+                            shar_Azkar: "احادیث صحیح و مستند",
+                            icon_Azkar: Icons.sunny_snowing),
+                        Prayer(
+                            name_Azkar: "دعاهای قرآنی",
+                            shar_Azkar: "احادیث صحیح و مستند",
+                            icon_Azkar: Icons.book_online_rounded),
+                        Prayer(
+                            name_Azkar: "دعاهای مسنون",
+                            shar_Azkar: "احادیث صحیح و مستند",
+                            icon_Azkar: Icons.book_rounded),
+                      ],
+                    ))
+                  ],
                 ),
               ),
+            ),
           ],
         ),
       ),
