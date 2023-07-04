@@ -32,6 +32,10 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   persistent_bottom_nav_bar: ^5.0.2
+  font_awesome_flutter: ^10.5.0
+  flutter_qiblah: ^2.2.0
+  rxdart_ext: ^0.2.9
+  flutter_compass: ^0.7.0
 
 dev_dependencies:
   flutter_test:
@@ -71,10 +75,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Afghan
+      fonts:
+        - asset: fonts/Iransans.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
