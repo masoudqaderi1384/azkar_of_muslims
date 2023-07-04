@@ -2,9 +2,11 @@ import 'package:azkar_of_muslims/utilities/azkar.dart';
 import 'package:azkar_of_muslims/utilities/preyer_motion.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,12 +20,18 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.grey.shade200,
         color: Colors.blue.shade800,
         animationDuration: Duration(milliseconds: 300),
+        height: 60.0,
         items: <Widget>[
-          Icon(Icons.add, size: 30),
-          Icon(Icons.list, size: 30),
-          Icon(Icons.compare_arrows, size: 30),
+          FaIcon(FontAwesomeIcons.house, color: Colors.grey.shade200,),
+          FaIcon(FontAwesomeIcons.solidClock, color: Colors.grey.shade200,),
+          FaIcon(FontAwesomeIcons.solidCalendarCheck, color: Colors.grey.shade200,),
+          FaIcon(FontAwesomeIcons.solidCompass, color: Colors.grey.shade200,),
+          FaIcon(FontAwesomeIcons.solidHeart, color: Colors.grey.shade200,),
         ],
         onTap: (index) {
+          setState(() {
+            print(index);
+          });
         },
       ),
       backgroundColor: Colors.blue[800],
@@ -35,18 +43,8 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue[600],
-                            borderRadius: BorderRadius.circular(12.0)),
-                        padding: EdgeInsets.all(12.0),
-                        child: Icon(
-                          Icons.menu_rounded,
-                          color: Colors.white,
-                        ),
-                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
@@ -61,14 +59,32 @@ class _HomePageState extends State<HomePage> {
                           ),
                           SizedBox(height: 8),
                           Text(
-                            "دعاهای جامع نبوی",
+                            "دعاهای جامع نبوی ",
                             style: TextStyle(
                                 fontFamily: 'Afghan',
                                 fontSize: 12,
                                 color: Colors.blue[200]),
                           )
                         ],
-                      )
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue[600],
+                            borderRadius: BorderRadius.circular(12.0)),
+                        padding: EdgeInsets.all(12.0),
+                        child: GestureDetector(
+                          child: Icon(
+                            Icons.menu_rounded,
+                            color: Colors.white,
+                          ),
+                          onTap: (){
+                            setState(() {
+                              print("a");
+                            });
+                          },
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(
