@@ -228,19 +228,19 @@ class _HomePageState extends State<HomePage> {
                               shar_Azkar: "احادیث صحیح و مستند",
                               icon_Azkar: Icons.book_rounded),
                           Prayer(
-                              name_Azkar: "دعاهای مسنون",
+                              name_Azkar: "سلاح مؤمن",
                               shar_Azkar: "احادیث صحیح و مستند",
                               icon_Azkar: Icons.book_rounded),
                           Prayer(
-                              name_Azkar: "دعاهای مسنون",
+                              name_Azkar: "پناهگاه مسلمان",
                               shar_Azkar: "احادیث صحیح و مستند",
                               icon_Azkar: Icons.book_rounded),
                           Prayer(
-                              name_Azkar: "دعاهای مسنون",
+                              name_Azkar: "سپهر مؤمن",
                               shar_Azkar: "احادیث صحیح و مستند",
                               icon_Azkar: Icons.book_rounded),
                           Prayer(
-                              name_Azkar: "دعاهای مسنون",
+                              name_Azkar: "احیاء جامع نبوی",
                               shar_Azkar: "احادیث صحیح و مستند",
                               icon_Azkar: Icons.book_rounded),
                         ],

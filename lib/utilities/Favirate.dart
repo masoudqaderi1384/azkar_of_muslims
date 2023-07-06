@@ -11,7 +11,7 @@ class _FavirateState extends State<Favirate> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue[800],
+        backgroundColor: Colors.grey[200],
         body: Center(child: Text("Favorite")),
       ),
     );

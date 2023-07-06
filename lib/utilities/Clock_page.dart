@@ -12,7 +12,7 @@ class _Clock_pageState extends State<Clock_page> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue[800],
+        backgroundColor: Colors.grey[200],
         body: SafeArea(
           child: Column(
             children: [
@@ -90,3 +90,4 @@ class _Clock_pageState extends State<Clock_page> {
     );
   }
 }
+//https://youtu.be/fchEcBc2D8A
