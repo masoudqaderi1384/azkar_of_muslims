@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'curved_navigation_bar.dart';
 import 'navigation_service.dart';
 
-class Clender extends StatefulWidget {
-  const Clender({Key? key}) : super(key: key);
+class Calendar extends StatefulWidget {
+  const Calendar({Key? key}) : super(key: key);
 
   @override
-  State<Clender> createState() => _ClenderState();
+  State<Calendar> createState() => _CalendarState();
 }
 
-class _ClenderState extends State<Clender> {
+class _CalendarState extends State<Calendar> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: buildCurvedNavigationBar(
           context,
-          (index) {
+              (index) {
             switch (index) {
               case 0:
                 NavigationService.navigateToHome();
@@ -38,7 +38,7 @@ class _ClenderState extends State<Clender> {
           2, // Set the current index for this page
         ),
         backgroundColor: Colors.blue[800],
-          body: Center(child: Text("Clock")),
+        body: Center(child: Text("Clock")),
       ),
     );
   }

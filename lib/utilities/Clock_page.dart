@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'curved_navigation_bar.dart';
 import 'navigation_service.dart';
+import 'main.dart';
 
 class Clock_page extends StatefulWidget {
   const Clock_page({Key? key}) : super(key: key);
@@ -16,7 +17,17 @@ class _Clock_pageState extends State<Clock_page> {
       child: Scaffold(
         bottomNavigationBar: buildCurvedNavigationBar(
           context,
-          (index) {
+              (index) {
+            if (index == PageManager.currentPageIndex) {
+              // If the selected index is already the current page index, do nothing
+              return;
+            }
+
+            setState(() {
+              PageManager.currentPageIndex =
+                  index; // Set the current index to the selected index
+            });
+
             switch (index) {
               case 0:
                 NavigationService.navigateToHome();
@@ -35,7 +46,7 @@ class _Clock_pageState extends State<Clock_page> {
                 break;
             }
           },
-          1,
+          PageManager.currentPageIndex,
         ),
         backgroundColor: Colors.blue[800],
         body: Center(child: Text("Clock")),

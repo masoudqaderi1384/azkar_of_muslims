@@ -8,7 +8,6 @@ class Favirate extends StatefulWidget {
   @override
   State<Favirate> createState() => _FavirateState();
 }
-
 class _FavirateState extends State<Favirate> {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +15,7 @@ class _FavirateState extends State<Favirate> {
       child: Scaffold(
         bottomNavigationBar: buildCurvedNavigationBar(
           context,
-          (index) {
+              (index) {
             switch (index) {
               case 0:
                 NavigationService.navigateToHome();
@@ -38,9 +37,8 @@ class _FavirateState extends State<Favirate> {
           3, // Set the current index for this page
         ),
         backgroundColor: Colors.blue[800],
-          body: Center(child: Text("Clock")),
+        body: Center(child: Text("Favorite")),
       ),
     );
-    ;
   }
 }

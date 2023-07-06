@@ -11,11 +11,15 @@ void main() {
   runApp(MyApp());
 }
 
+class PageManager {
+  static int currentPageIndex = 0;
+}
+
 class MyApp extends StatelessWidget {
   final List<Widget> _children = [
     HomePage(),
     Clock_page(),
-    Clender(),
+    Calendar(),
     Compass(),
     Favirate(),
   ];
@@ -30,20 +34,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner:false,
       navigatorKey: NavigationService.navigatorKey,
       home: Scaffold(
-        body: _children[_currentIndex],
+        body: _children[PageManager.currentPageIndex],
         bottomNavigationBar: buildCurvedNavigationBar(
           context,
-          onTabTapped,
-          _currentIndex,
+              (index) {
+            NavigationService.navigateToHome(); // Navigate to home first
+            PageManager.currentPageIndex = index; // Save the current page index
+          },
+          PageManager.currentPageIndex,
         ),
       ),
       // Define named routes...
       routes: {
         '/home': (context) => HomePage(),
         '/clock': (context) => Clock_page(),
-        '/calendar': (context) => Clender(),
+        '/calendar': (context) => Calendar(),
         '/compass': (context) => Compass(),
         '/favorite': (context) => Favirate(),
       },

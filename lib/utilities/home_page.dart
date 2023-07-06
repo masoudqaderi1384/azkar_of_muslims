@@ -5,10 +5,14 @@ import 'package:azkar_of_muslims/utilities/curved_navigation_bar.dart';
 import 'navigation_service.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
+}
+
+class PageManager {
+  static int currentPageIndex = 0;
 }
 
 class _HomePageState extends State<HomePage> {
@@ -30,6 +34,16 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: buildCurvedNavigationBar(
           context,
           (index) {
+            if (index == PageManager.currentPageIndex) {
+              // If the selected index is already the current page index, do nothing
+              return;
+            }
+
+            setState(() {
+              PageManager.currentPageIndex =
+                  index; // Set the current index to the selected index
+            });
+
             switch (index) {
               case 0:
                 NavigationService.navigateToHome();
@@ -48,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                 break;
             }
           },
-          0, // Set the current index for this page
+          PageManager.currentPageIndex,
         ),
         backgroundColor: Colors.blue[800],
         body: SafeArea(
