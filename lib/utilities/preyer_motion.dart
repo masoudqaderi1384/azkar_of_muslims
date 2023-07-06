@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 var design = TextStyle(fontFamily: 'Afghan', fontSize: 16, color: Colors.blue[100]);
 
 class Preyer_table extends StatelessWidget {

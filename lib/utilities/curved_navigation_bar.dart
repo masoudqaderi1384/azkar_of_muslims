@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'navigation_service.dart';
 
 Widget buildCurvedNavigationBar(BuildContext context, Function(int) onTap, int currentIndex) {
   return CurvedNavigationBar(

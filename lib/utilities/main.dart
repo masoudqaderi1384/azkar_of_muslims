@@ -7,7 +7,6 @@ import 'Clock_page.dart';
 import 'Clender.dart';
 import 'Compass.dart';
 import 'Favirate.dart';
-import 'curved_navigation_bar.dart';
 
 void main() {
   runApp(MyApp());

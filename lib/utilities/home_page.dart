@@ -1,8 +1,6 @@
 import 'package:azkar_of_muslims/utilities/azkar.dart';
 import 'package:azkar_of_muslims/utilities/preyer_motion.dart';
 import 'package:flutter/material.dart';
-import 'package:azkar_of_muslims/utilities/curved_navigation_bar.dart';
-import 'navigation_service.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
