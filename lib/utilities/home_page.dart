@@ -11,9 +11,6 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class PageManager {
-  static int currentPageIndex = 0;
-}
 
 class _HomePageState extends State<HomePage> {
   double xOffset = 0;
@@ -31,39 +28,6 @@ class _HomePageState extends State<HomePage> {
       duration: Duration(milliseconds: 300),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(60.0)),
       child: Scaffold(
-        bottomNavigationBar: buildCurvedNavigationBar(
-          context,
-          (index) {
-            if (index == PageManager.currentPageIndex) {
-              // If the selected index is already the current page index, do nothing
-              return;
-            }
-
-            setState(() {
-              PageManager.currentPageIndex =
-                  index; // Set the current index to the selected index
-            });
-
-            switch (index) {
-              case 0:
-                NavigationService.navigateToHome();
-                break;
-              case 1:
-                NavigationService.navigateTo('/clock');
-                break;
-              case 2:
-                NavigationService.navigateTo('/calendar');
-                break;
-              case 3:
-                NavigationService.navigateTo('/compass');
-                break;
-              case 4:
-                NavigationService.navigateTo('/favorite');
-                break;
-            }
-          },
-          PageManager.currentPageIndex,
-        ),
         backgroundColor: Colors.blue[800],
         body: SafeArea(
           child: Column(

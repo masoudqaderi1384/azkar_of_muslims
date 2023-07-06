@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'curved_navigation_bar.dart';
-import 'navigation_service.dart';
-import 'main.dart';
 
 class Clock_page extends StatefulWidget {
   const Clock_page({Key? key}) : super(key: key);
@@ -15,41 +12,80 @@ class _Clock_pageState extends State<Clock_page> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: buildCurvedNavigationBar(
-          context,
-              (index) {
-            if (index == PageManager.currentPageIndex) {
-              // If the selected index is already the current page index, do nothing
-              return;
-            }
-
-            setState(() {
-              PageManager.currentPageIndex =
-                  index; // Set the current index to the selected index
-            });
-
-            switch (index) {
-              case 0:
-                NavigationService.navigateToHome();
-                break;
-              case 1:
-                NavigationService.navigateTo('/clock');
-                break;
-              case 2:
-                NavigationService.navigateTo('/calendar');
-                break;
-              case 3:
-                NavigationService.navigateTo('/compass');
-                break;
-              case 4:
-                NavigationService.navigateTo('/favorite');
-                break;
-            }
-          },
-          PageManager.currentPageIndex,
-        ),
         backgroundColor: Colors.blue[800],
-        body: Center(child: Text("Clock")),
+        body: SafeArea(
+          child: Column(
+            children: [
+              Padding(
+                  padding: EdgeInsets.only(left: 25.0, top: 25.0, right: 25.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "ساعت",
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontFamily: 'Afghan',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.blue[600],
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              padding: EdgeInsets.all(12.0),
+                              child: IconButton(
+                                icon: Icon(Icons.menu_rounded,
+                                    color: Colors.white),
+                                onPressed: () {
+                                  setState(() {});
+                                },
+                              )),
+
+                        ],
+                      ),
+
+
+                    ],
+                  ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(50.0),
+                            topRight: Radius.circular(50.0)),
+                      ),
+                      padding: EdgeInsets.all(25.0),
+                      child: Column(children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.blue[700],
+                              borderRadius:
+                              BorderRadius.circular(10.0)),
+                          height: 10,
+                          width: 75,
+                        ),
+                      ]),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
