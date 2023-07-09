@@ -15,7 +15,7 @@ class Prayer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Pdf_Azkar()),);
+        Navigator.push(context, MaterialPageRoute(builder: (context) => PdfAzkar()),);
       },
       child: Padding(
         padding: const EdgeInsets.only(bottom: 12.0),
