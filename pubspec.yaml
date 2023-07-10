@@ -33,8 +33,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.5.0
   curved_navigation_bar: ^1.0.3
-  flutter_pdfview: ^1.0.0
-
+  flutter_analog_clock: ^1.0.3
+  slide_digital_clock: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -52,16 +52,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
     - images/
-    - pdfs/
+    - files/flutter.pdf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

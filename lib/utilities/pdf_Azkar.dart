@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
-
 
 class PdfAzkar extends StatelessWidget {
   @override
@@ -27,10 +25,7 @@ class PdfAzkar extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 400, // Adjust the height as needed
-                child: PDFView(
-                  filePath: 'assets/pdfs/flutter.pdf', // Replace with the actual path to your PDF file
-                ),
+                height: 400, // Adjust the height as neede
               ),
             ],
           ),

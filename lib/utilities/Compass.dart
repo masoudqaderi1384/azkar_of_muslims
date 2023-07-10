@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class Compass extends StatefulWidget {
@@ -10,11 +12,8 @@ class Compass extends StatefulWidget {
 class _CompassState extends State<Compass> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.grey[200],
-        body: Center(child: Text("Compass")),
-      ),
+    return Scaffold(
+
     );
   }
 }
