@@ -1,6 +1,7 @@
 import 'package:azkar_of_muslims/utilities/azkar.dart';
 import 'package:azkar_of_muslims/utilities/preyer_motion.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,23 +10,12 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-
 class _HomePageState extends State<HomePage> {
-  double xOffset = 0;
-  double yOffset = 0;
-  double scaleFactor = 1;
 
-  bool isDrawenOpen = false;
-  bool isNamaz = false;
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      transform: Matrix4.translationValues(xOffset, yOffset, 0)
-        ..scale(scaleFactor),
-      duration: Duration(milliseconds: 300),
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(60.0)),
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.blue[800],
         body: SafeArea(
           child: Column(
@@ -67,31 +57,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.blue[600],
                               borderRadius: BorderRadius.circular(12.0)),
                           padding: EdgeInsets.all(12.0),
-                          child: isDrawenOpen
-                              ? IconButton(
-                                  icon: Icon(Icons.arrow_forward_ios_rounded,
-                                      color: Colors.white),
-                                  onPressed: () {
-                                    setState(() {
-                                      xOffset = 0;
-                                      yOffset = 0;
-                                      scaleFactor = 1;
-                                      isDrawenOpen = false;
-                                    });
-                                  },
-                                )
-                              : IconButton(
-                                  icon: Icon(Icons.menu_rounded,
-                                      color: Colors.white),
-                                  onPressed: () {
-                                    setState(() {
-                                      xOffset = -120;
-                                      yOffset = 100;
-                                      scaleFactor = 0.75;
-                                      isDrawenOpen = true;
-                                    });
-                                  },
-                                ),
+                          child: FaIcon(FontAwesomeIcons.mosque, color: Colors.white),
                         ),
                       ],
                     ),
@@ -252,7 +218,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-      ),
     );
   }
 }

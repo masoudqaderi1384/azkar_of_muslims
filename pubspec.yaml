@@ -37,16 +37,14 @@ dependencies:
   slide_digital_clock: ^1.0.3
   flutter_compass: '^0.7.0'
   permission_handler: ^10.4.2
+  adhan_dart: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+
   flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the

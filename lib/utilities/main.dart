@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
               color: Colors.grey.shade200,
             ),
             FaIcon(
-              FontAwesomeIcons.solidHeart,
+              FontAwesomeIcons.gear,
               color: Colors.grey.shade200,
             ),
           ],

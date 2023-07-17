@@ -1,5 +1,6 @@
 import 'package:azkar_of_muslims/utilities/pdf_Azkar.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Prayer extends StatelessWidget {
   final String name_Azkar;
@@ -57,7 +58,7 @@ class Prayer extends StatelessWidget {
                       ],
                     ),
                     SizedBox(width: 20.0,),
-                    Icon(
+                    FaIcon(
                       icon_Azkar,
                       color: Colors.yellow[800],
                     ),
