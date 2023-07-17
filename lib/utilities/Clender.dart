@@ -13,7 +13,14 @@ class _CalendarState extends State<Calendar> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey[200],
-        body: Center(child: Text("Clock")),
+        body: Center(
+            child: Text(
+          "در ویرژن های بعدی فعال میشود",
+          style: TextStyle(
+            fontFamily: "Afghan",
+            fontSize: 18,
+          ),
+        )),
       ),
     );
   }

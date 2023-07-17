@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:azkar_of_muslims/utilities/home_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -8,14 +10,74 @@ import 'Clender.dart';
 import 'Compass.dart';
 import 'Favirate.dart';
 
-void main() {
-  runApp(MyApp());
+void main() => runApp(SplashScreenApp());
+
+class SplashScreenApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Splash Screen App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SplashScreen(),
+    );
+  }
 }
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => MyApp()),
+      );
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue[800],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+           Text("ضیاء الاذکار", style: TextStyle(
+             fontSize: 24,
+             fontFamily: 'Afghan',
+             fontWeight: FontWeight.bold,
+             color: Colors.white,
+           ),),
+            SizedBox(height: 50),
+            Text(
+              'version: 1.0.0+1',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'comfortaa',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 
 class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
+
 
 final List<Widget> pages = [
   HomePage(),

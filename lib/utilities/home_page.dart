@@ -102,35 +102,35 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.grey[200],
                             ),
                             name_namaz: "شام",
-                            time_namaz: "09:30"),
+                            time_namaz: "07:30"),
                         Preyer_table(
                             icon_namaz: Icon(
                               Icons.access_time_filled_rounded,
                               color: Colors.grey[200],
                             ),
                             name_namaz: "عصر",
-                            time_namaz: "09:30"),
+                            time_namaz: "06:00"),
                         Preyer_table(
                             icon_namaz: Icon(
                               Icons.access_time_filled_rounded,
                               color: Colors.grey[200],
                             ),
                             name_namaz: "ظهر",
-                            time_namaz: "09:30"),
+                            time_namaz: "01:00"),
                         Preyer_table(
                             icon_namaz: Icon(
                               Icons.access_time_filled_rounded,
                               color: Colors.grey[200],
                             ),
                             name_namaz: "نور",
-                            time_namaz: "09:30"),
+                            time_namaz: "05:15"),
                         Preyer_table(
                             icon_namaz: Icon(
                               Icons.access_time_filled_rounded,
                               color: Colors.grey[200],
                             ),
                             name_namaz: "صبح",
-                            time_namaz: "09:30"),
+                            time_namaz: "04:00"),
                       ],
                     )
                   ],
